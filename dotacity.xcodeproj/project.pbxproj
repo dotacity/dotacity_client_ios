@@ -13,9 +13,11 @@
 		9789106724FFE86900E6F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9789106524FFE86900E6F2BD /* Main.storyboard */; };
 		9789106924FFE86B00E6F2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9789106824FFE86B00E6F2BD /* Assets.xcassets */; };
 		9789106C24FFE86B00E6F2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9789106A24FFE86B00E6F2BD /* LaunchScreen.storyboard */; };
+		FC249891FE3FB7B1CCB9E7E7 /* Pods_dotacity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC6617E4F1B8EE79C7043DD /* Pods_dotacity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11BED715EE91D3B2F3A97646 /* Pods-dotacity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotacity.release.xcconfig"; path = "Target Support Files/Pods-dotacity/Pods-dotacity.release.xcconfig"; sourceTree = "<group>"; };
 		9789105C24FFE86900E6F2BD /* dotacity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dotacity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9789105F24FFE86900E6F2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9789106124FFE86900E6F2BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		9789106824FFE86B00E6F2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9789106B24FFE86B00E6F2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9789106D24FFE86B00E6F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A469864B9BDECA9E72B5B9A8 /* Pods-dotacity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotacity.debug.xcconfig"; path = "Target Support Files/Pods-dotacity/Pods-dotacity.debug.xcconfig"; sourceTree = "<group>"; };
+		ABC6617E4F1B8EE79C7043DD /* Pods_dotacity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotacity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC249891FE3FB7B1CCB9E7E7 /* Pods_dotacity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C6288005ED665272D0AEB1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC6617E4F1B8EE79C7043DD /* Pods_dotacity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7226F70F4CA66E213A0C38C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A469864B9BDECA9E72B5B9A8 /* Pods-dotacity.debug.xcconfig */,
+				11BED715EE91D3B2F3A97646 /* Pods-dotacity.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9789105324FFE86800E6F2BD = {
 			isa = PBXGroup;
 			children = (
 				9789105E24FFE86900E6F2BD /* dotacity */,
 				9789105D24FFE86900E6F2BD /* Products */,
+				7226F70F4CA66E213A0C38C6 /* Pods */,
+				5C6288005ED665272D0AEB1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9789107024FFE86B00E6F2BD /* Build configuration list for PBXNativeTarget "dotacity" */;
 			buildPhases = (
+				D3321101027595546290FFDC /* [CP] Check Pods Manifest.lock */,
 				9789105824FFE86800E6F2BD /* Sources */,
 				9789105924FFE86800E6F2BD /* Frameworks */,
 				9789105A24FFE86800E6F2BD /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3321101027595546290FFDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dotacity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9789105824FFE86800E6F2BD /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		9789107124FFE86B00E6F2BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A469864B9BDECA9E72B5B9A8 /* Pods-dotacity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +352,7 @@
 		};
 		9789107224FFE86B00E6F2BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11BED715EE91D3B2F3A97646 /* Pods-dotacity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
